@@ -6,13 +6,11 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const BASE_URL = "https://pixabay.com/api";
 const API_KEY = "42039284-aa75c07fa754230e40c75f28c";
-//const url = `${BASE_URL}?key=${API_KEY}&q=&{query}&image_type=photo&orientation=horiontal&safesearch=true`;
 
 const btn = document.querySelector(".btn");
 const form = document.querySelector(".foto-form");
 const list = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
-
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -63,7 +61,7 @@ function createList(hits) {
         `<li class="gallery-item">
         <a class="gallery-link" href="${largeImageURL}">
         <img class="gallery-image" src="${webformatURL}" alt="${tags}"/>
-        <p class="gallery-text">Likes: <span>${likes}</span> Views: <span>${views}</span> Comments: <span>${comments}</span> Downloads: <span>${downloads}</span></p>
+        <p class="gallery-text">Likes: ${likes} Views: ${views} Comments: ${comments} Downloads: ${downloads}</p>
         </a>
         </li>`)
     .join('');
