@@ -4,7 +4,7 @@ import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-const BASE_URL = "https://pixabay.com/api";
+const BASE_URL = "https://pixabay.com/api/";
 const API_KEY = "42039284-aa75c07fa754230e40c75f28c";
 
 const btn = document.querySelector(".btn");
