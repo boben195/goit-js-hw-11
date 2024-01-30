@@ -164,6 +164,9 @@ function createMessage(message) {
 }
 
 function showLoader(state = true) {
+  loader.classList.add('loader')
   loader.style.display = !state ? 'none' : 'inline-block';
   btn.disabled = state;
 }
+
+loader.classList.remove('loader')
