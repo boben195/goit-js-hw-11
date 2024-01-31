@@ -39,8 +39,15 @@ form.addEventListener('submit', event => {
         captionDelay: 250,
       });
       form.reset();
+      simplyGallery.refresh();
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      iziToast.error({
+        title: 'ERROR',
+        message: `❌ Ooopsi Doopsi ${error}`,
+      });
+    });
+  
 });
 
 function getPictures(url) {
@@ -65,7 +72,9 @@ function createList(hits) {
         </a>
         </li>`)
     .join('');
+    simplyGallery.refresh();
 }
+
 
 function createMessage(message) {
   iziToast.show({
